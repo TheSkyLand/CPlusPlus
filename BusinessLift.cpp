@@ -1,5 +1,5 @@
 #include <iostream>
-
+//!WORK IN PROGRESS
 int main()
 {
 	int K = 2; //наибольшее количество людей в лифте
