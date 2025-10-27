@@ -1,79 +1,80 @@
-#include <iostream>
-#include "ConsoleApplication3.h"
+#include <iostream>;
+#include <vector>;
+using namespace std;
 
 
 //станислав олгеович больше не задавайте такие задания
 int main()
 {
-	int a[5] = { 4, 2, 3, 5, 1 };
+	//int a[5] = { 4, 2, 3, 5, 1 };
+	//int b[5]{};
 
-	int b[5]{};
+	//int len = std::size(a);
+	//cout << "len: ";
+	//cout << len << endl;
 
-	int f[5]{};
+	cout << "enter size: " << endl;
 
-	int vertical = 5;
+	int SIZE;
+	cin >> SIZE;
 
-	int horizontal = 4;
+	int vertical = SIZE;
 
-	int len = int16_t(std::size(a));
-	std::cout << len << std::endl;
+	cout << SIZE;
 
-	int array[5]{};
+	std::vector<int> arr(SIZE);
+	std::vector<int> arrB(SIZE);
 
-	int arrayB[5]{};
 	
-	for (int i = 0; i < 5; i++)
+
+	for (int i = 0; i < SIZE; i++)
 	{
-		std::cout << "enter number: ";
-		std::cin >> array[i];
+		cout << "enter number: ";
+		cin >> arr[i];
 	}
 
-	std::cout << "debug pause" << std::endl;
+	cout << "Custom lines: " << endl;
 
-	system("pause");
-
-	std::cout << "Custom lines: " << std::endl;
-
-		for (int i = 4; i >= 0; i--)
+	for (int i = SIZE - 1; i >= 0; i--)
 	{
-		arrayB[i] += array[i];
+		arrB[i] = arr[i];
 
-		array[i] = 5 + 1 - vertical;
+		arr[i] = SIZE + 1 - vertical;
 
 		vertical--;
 	}
 
-	std::cout << "Input elements: " << std::endl;
+	cout << "Input elements: " << endl;
 
-	for (int i = 0; i < std::size(array); i++)
+	for (int i = 0; i < SIZE; i++)
 	{
-		std::cout << arrayB[i]; 
+		cout << arrB[i];
 	}
-	std::cout << " " << std::endl;
+	cout << " " << endl;
 
-	for (int i = 0; i < std::size(array); i++)
+	for (int i = 0; i < SIZE; i++)
 	{
-		std::cout << array[i];
+		cout << arr[i];
 	}
 
-	std::cout << " " << std::endl;						
+	cout << " " << endl;
 
-	std::cout << "Output elements: " << std::endl;
-	for (int i = 0; i < 5; i++)
+	cout << "Output elements: " << endl;
+
+	for (int i = 0; i < SIZE; i++)
 	{
-		array[i] = 5 + 1 - arrayB[arrayB[i] - 1]; //местами меняем индекс чисел и сами числа
+		arr[i] = SIZE + 1 - arrB[arrB[i] - 1]; //местами меняем индекс чисел и сами числа
 
-
-
-		std::cout << array[i];
+		cout << arr[i];
 	}
-	//код выше для того чтобы подставлять свои цифры
 	
+	//код выше для того чтобы подставлять свои цифры
+
 	//////////////////////////////////отладка
 
 	//здесь просто отладочные строки, ничего особенного, но уточним некоторые моменты
 	/*
-	5 4 -> 1 1 
+	5 4 -> 1 1
 	4 2 -> 2 4
 	3 3 -> 3 3
 	2 5 -> 4 5
@@ -87,8 +88,8 @@ int main()
 
 	*/
 
-
-	std::cout << "Debug lines: " << std::endl;
+	/*
+	cout << "Debug lines: " << endl;
 
 	vertical = 5;
 
@@ -98,32 +99,33 @@ int main()
 	{
 		b[i] += a[i];
 
-		a[i] = 5 + 1 - vertical;
+		a[i] = len + 1 - vertical;
 
 		vertical--;
 	}
 
-	std::cout << "Input elements: " << std::endl;
+	cout << "Input elements: " << endl;
 
 	for (int i = 0; i < std::size(a); i++)
 	{
-		std::cout << b[i];
+		cout << b[i];
 	}
-	std::cout << " " << std::endl;
+	cout << " " << endl;
 
 	for (int i = 0; i < std::size(a); i++)
 	{
-		std::cout << a[i];
+		cout << a[i];
 	}
 
-	std::cout << " " << std::endl;						
+	cout << " " << endl;
 
-	std::cout << "Output elements: " << std::endl;
+	cout << "Output elements: " << endl;
 
 	for (int i = 0; i < 5; i++)
 	{
-		a[i] = 5 + 1 - b[b[i] - 1];
+		a[i] = len + 1 - b[b[i] - 1];
 
-		std::cout << a[i];
+		cout << a[i];
 	}
+	*/
 }
